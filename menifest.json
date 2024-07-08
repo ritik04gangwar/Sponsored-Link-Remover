@@ -1,0 +1,14 @@
+{
+    "menifest_version" : 1,
+    "name":"Remove Sponsored Websites",
+    "version":"0.0.1",
+    "description":"It removes sponsored websites that appear in top most results in Google searches.",
+    "permissions":["activationTab"],
+    "content_scripts":[
+        {
+            "matches":["https://www.google.com/searches*"],
+            "js":["content.js"],
+            "run_at":"document_end"
+        }
+    ]
+}
